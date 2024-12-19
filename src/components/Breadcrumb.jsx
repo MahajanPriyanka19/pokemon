@@ -6,7 +6,7 @@ export default function Breadcrumb({ paths }) {
       {paths.map((path, index) => (
         <span key={index}>
           {index > 0 && " -> "}
-          {path.href ? <Link href={path.href}>{path.name}</Link> : path.name}
+          {path.href ? <Link className="capitalize" href={path.href}>{path.name}</Link> : path.name}
         </span>
       ))}
     </div>

@@ -1,4 +1,6 @@
-'use client'
+"use client";
+
+import Breadcrumb from "@/components/Breadcrumb";
 import { ArrowLeftFromLineIcon, ArrowLeftIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,9 +24,8 @@ export default function PokemonDetail({ params }) {
 
   return (
     <div className="container my-4 mx-auto px-4">
-      <Link href="/" className="flex items-center text-blue-700 mb-4">
-        <ArrowLeftIcon className="mr-2" /> Back
-      </Link>
+      <Breadcrumb paths={[{href:'/', name:'Home'},{href:`${name}`, name:`${name}`}]}/>
+      
       <div className="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
         <Image
           className="w-full bg-blue-400 object-contain"
@@ -81,6 +82,9 @@ export default function PokemonDetail({ params }) {
           </p>
         </div>
       </div>
+      <Link href="/" className="flex items-center text-blue-700 mb-4">
+        <ArrowLeftIcon className="mr-2" /> Back
+      </Link>
     </div>
   );
 }
