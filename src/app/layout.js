@@ -9,9 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`antialiased bg-zinc-100`}>
-        <div className="container mx-auto my-4">
-          {typeof window !== "undefined" ? { children } : children}
-        </div>
+        <div className="container mx-auto my-4">{children}</div>
       </body>
     </html>
   );
